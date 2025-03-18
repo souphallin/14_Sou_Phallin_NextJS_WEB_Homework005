@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "38e76dbb-30cb-4cb1-9d62-6d25a066c9b4",
+		"name": "Homework 005 - API collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28102219"
+	},
+	"item": [
+		{
+			"name": "Book Controller",
+			"item": [
+				{
+					"name": "Get all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/book",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get book by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/book/1",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"book",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get books by book category id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/book?query=10",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"book"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search book by book title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/book?search=how do you live?",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"book"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "how do you live?"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book Category Controller",
+			"item": [
+				{
+					"name": "Get all book categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/book_category",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"book_category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get book category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/book_category/search?query=3",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"book_category",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cartoon Controller",
+			"item": [
+				{
+					"name": "Get all cartoons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/cartoon",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"cartoon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cartoon by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/cartoon/2",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"cartoon",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cartoon by cartoon genre id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/cartoon?genre=3",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"cartoon"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search cartoon by title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/cartoon?search=tom",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"cartoon"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "tom"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cartoon Genre Controller",
+			"item": [
+				{
+					"name": "Get all cartoon genres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/cartoon_genre",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"cartoon_genre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cartoon genre by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nextjs-homework005.vercel.app/api/cartoon_genre/search?genre=2",
+							"protocol": "https",
+							"host": [
+								"nextjs-homework005",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"cartoon_genre",
+								"search"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
