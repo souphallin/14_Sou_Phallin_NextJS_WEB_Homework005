@@ -1,16 +1,12 @@
 import CardOldSchoolComponent from "@/components/card-component/card-old-school";
-import PageTitle from "@/components/card-component/page-title";
+import PageTitleWithSelectCartoon from "@/components/page-title-route/page-title-with-select-cartoon";
 import SearchBar from "@/components/search-bar/search-bar";
 
 export default async function OldSchoolCategoryPage({ searchParams }) {
   const searchResult = (await searchParams).search;
-  // console.log("Old School Search : " , searchResult)
+  console.log("Old School Search : " , await searchParams)
 
-  const res = await fetch(
-    `https://nextjs-homework005.vercel.app/api/cartoon${
-      !searchResult ? "" : `?search=${searchResult}`
-    }`
-  );
+  const res = await fetch(`https://nextjs-homework005.vercel.app/api/cartoon${!searchResult ? "" : `?search=${searchResult}`}`);
   const oldschools = await res.json();
   // console.log("OldSchool : ", oldschools)
 
@@ -23,7 +19,7 @@ export default async function OldSchoolCategoryPage({ searchParams }) {
         </div>
 
         <div className="bg-white p-10 rounded-xl">
-          <PageTitle title="Old School Page" />
+          <PageTitleWithSelectCartoon title="Old School Page" />
 
           <div className="grid grid-cols-3 gap-10 p-10">
             {oldschools.payload.map((items, index) => (

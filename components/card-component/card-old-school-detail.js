@@ -55,28 +55,28 @@ export default function CardOldSchoolDetailComponent(detail) {
                   <path
                     d="M3.5 18V7C3.5 3 4.5 2 8.5 2H15.5C19.5 2 20.5 3 20.5 7V17C20.5 17.14 20.5 17.28 20.49 17.42"
                     stroke="#0B3954"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
                     d="M6.35 15H20.5V18.5C20.5 20.43 18.93 22 17 22H7C5.07 22 3.5 20.43 3.5 18.5V17.85C3.5 16.28 4.78 15 6.35 15Z"
                     stroke="#0B3954"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
                     d="M8 7H16"
                     stroke="#0B3954"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
                     d="M8 10.5H13"
                     stroke="#0B3954"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
@@ -112,28 +112,28 @@ export default function CardOldSchoolDetailComponent(detail) {
                   <path
                     d="M22 16.74V4.67001C22 3.47001 21.02 2.58001 19.83 2.68001H19.77C17.67 2.86001 14.48 3.93001 12.7 5.05001L12.53 5.16001C12.24 5.34001 11.76 5.34001 11.47 5.16001L11.22 5.01001C9.44 3.90001 6.26 2.84001 4.16 2.67001C2.97 2.57001 2 3.47001 2 4.66001V16.74C2 17.7 2.78 18.6 3.74 18.72L4.03 18.76C6.2 19.05 9.55 20.15 11.47 21.2L11.51 21.22C11.78 21.37 12.21 21.37 12.47 21.22C14.39 20.16 17.75 19.05 19.93 18.76L20.26 18.72C21.22 18.6 22 17.7 22 16.74Z"
                     stroke="#C81D25"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
                     d="M12 5.48999V20.49"
                     stroke="#C81D25"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
                     d="M7.75 8.48999H5.5"
                     stroke="#C81D25"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
                     d="M8.5 11.49H5.5"
                     stroke="#C81D25"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
