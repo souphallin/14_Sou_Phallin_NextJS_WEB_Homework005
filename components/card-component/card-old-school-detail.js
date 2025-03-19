@@ -1,4 +1,4 @@
-import { Link } from "iconsax-react";
+import Link from "next/link";
 
 export default function CardOldSchoolDetailComponent(detail) {
   return (
@@ -6,7 +6,6 @@ export default function CardOldSchoolDetailComponent(detail) {
       <div className="bg-gray-300">
         <div className="relative bg-white h-fit mx-32 rounded-t-3xl top-40 shadow-xl">
           <div className="flex pl-0">
-            {/* <NavBarLink/> */}
             <div className="absolute -top-24 flex gap-3 items-center">
               <div className="flex gap-2 items-center">
                 <svg
@@ -84,7 +83,7 @@ export default function CardOldSchoolDetailComponent(detail) {
                 </svg>
                 <Link href="/old-school-cartoons">
                   <h4 className="text-[#0B3954] font-semibold text-base">
-                    Old School Cartoon Icon
+                    Old-School Cartoons
                   </h4>
                 </Link>
               </div>
@@ -141,13 +140,14 @@ export default function CardOldSchoolDetailComponent(detail) {
                 </svg>
 
                 <h4 className="text-[#C81D25] font-semibold text-base">
-                  Book Name
+                  {detail.payload.ct_title}
                 </h4>
               </div>
             </div>
+
             <div className="absolute -top-24 right-32">
               <img
-                src="https://s3-alpha-sig.figma.com/img/66fc/adb4/1314aae54a3309a1c3f5d325e7d9a354?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Aip9Gt-QIMcjP~MnudlZfZ6Xc0VYWMDdnBPBH468QgsZ-whpOUKSmoEMlHOu6N2vLlqT5G6g7RDLBGkmYMHRLX4YeuRh55FWDxuU0p1jpl0JKIYqHIE0SevctYq3iEmB-snE~mxBA7d1Npt5ADFzjhheXlOn1gcebEg-MYqpv9qSpqRSffLxcnkZJkA8IcnXC0zmE6erNZ2L7y25RxSO9UrbMErjRkzc0voOgJ7bJYebQeFEXElVaqSe7eh3YXiIFIg7PRkKdOCbRBM3KpLeaNQZ3Me0O49bWP13Be8aQ2F9mIm8AsMJqF1uGI~fmGV3gBpoXoCWgdL4lgJCZ0uPbw__"
+                src={detail.payload.image}
                 width={250}
                 alt="Picture of the Book Category"
                 className="rounded-xl drop-shadow-lg"
@@ -155,63 +155,48 @@ export default function CardOldSchoolDetailComponent(detail) {
             </div>
           </div>
 
-          <div className="pt-60 px-32 pb-20">
-            <Link href={`/old-school-cartoons`}>
-              <h2 className="text-[#0B3954] font-semibold text-2xl">Tom and Jerry</h2>
-              <div className="flex gap-2 text-lg py-2">
-                <p>by</p>
-                <h4 className="text-[#087E8B] font-semibold">Black Monster</h4>
+          <div className="pt-56 px-32 pb-20">
+            <h2 className="text-[#0B3954] font-semibold text-2xl">
+              {detail.payload.ct_title}
+            </h2>
+            <div className="flex gap-2 text-lg py-2">
+              <p>by</p>
+              <h4 className="text-[#087E8B] font-semibold">
+                {detail.payload.ct_creator}
+              </h4>
+            </div>
+            <div className="flex">
+              <div className="flex gap-2">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.9999 16.33C9.60992 16.33 7.66992 14.39 7.66992 12C7.66992 9.61 9.60992 7.67 11.9999 7.67C14.3899 7.67 16.3299 9.61 16.3299 12C16.3299 14.39 14.3899 16.33 11.9999 16.33ZM11.9999 9.17C10.4399 9.17 9.16992 10.44 9.16992 12C9.16992 13.56 10.4399 14.83 11.9999 14.83C13.5599 14.83 14.8299 13.56 14.8299 12C14.8299 10.44 13.5599 9.17 11.9999 9.17Z"
+                    fill="#087E8B"
+                  />
+                  <path
+                    d="M12.0001 21.02C8.24008 21.02 4.69008 18.82 2.25008 15C1.19008 13.35 1.19008 10.66 2.25008 9C4.70008 5.18 8.25008 2.98 12.0001 2.98C15.7501 2.98 19.3001 5.18 21.7401 9C22.8001 10.65 22.8001 13.34 21.7401 15C19.3001 18.82 15.7501 21.02 12.0001 21.02ZM12.0001 4.48C8.77008 4.48 5.68008 6.42 3.52008 9.81C2.77008 10.98 2.77008 13.02 3.52008 14.19C5.68008 17.58 8.77008 19.52 12.0001 19.52C15.2301 19.52 18.3201 17.58 20.4801 14.19C21.2301 13.02 21.2301 10.98 20.4801 9.81C18.3201 6.42 15.2301 4.48 12.0001 4.48Z"
+                    fill="#087E8B"
+                  />
+                </svg>
+                <p className="font-semibold text-[#087E8B]">
+                  {detail.payload.view_count}
+                </p>
               </div>
-              <p className="font-normal leading-7">
-                "How Do You Live?" (君たちはどう生きるか, Kimitachi wa Dō Ikiru
-                ka) by Genzaburō Yoshino is a philosophical coming-of-age novel
-                set in pre-war Japan. It revolves around Junichi "Copper" Honda,
-                a thoughtful 15-year-old boy, who is facing the complexities of
-                adolescence, his family life, and the social realities around
-                him. Copper's life changes after his father’s death, which
-                forces him to grapple with the idea of responsibility, morality,
-                and the value of individual actions. The novel takes a unique
-                approach by blending a narrative with deep philosophical
-                lessons. Copper’s Uncle, a major influence on him, writes long
-                letters to him that contain valuable wisdom about how one should
-                live life, focusing on themes like social justice, personal
-                responsibility, and compassion. These letters are the central
-                guide for Copper, offering him tools to navigate the world and
-                think critically about what it means to be a good person.
-                Throughout the story, Copper experiences several incidents that
-                challenge his understanding of society. He confronts issues like
-                bullying, classism, and how to deal with personal suffering. One
-                important aspect of the novel is Copper's relationship with his
-                peers and the way he learns to handle the complexities of
-                friendships and social interactions. He also learns about the
-                differences between the ideal self and the real self,
-                discovering how to cope with imperfections and imperfections in
-                others. Copper’s growth throughout the novel isn't just
-                emotional but deeply intellectual. His uncle’s lessons on the
-                interconnectedness of people, the importance of self-awareness,
-                and contributing to the greater good shape Copper into a
-                reflective and compassionate young man. By the end of the novel,
-                Copper begins to develop a clearer understanding of how he
-                should live his life, striving to be a person who lives not only
-                for himself but also for others. The book isn’t just about a boy
-                growing up; it’s a call to the readers to reflect on their own
-                lives and the way they live in the world. It challenges its
-                audience to think critically about their values and actions,
-                making it timeless in its appeal. The story is particularly
-                impactful for younger readers, as it offers them both a
-                fictional narrative and practical lessons for life. In addition
-                to its philosophical depth, "How Do You Live?" has influenced
-                Japanese culture profoundly. The book has been celebrated for
-                its positive moral teachings, and its themes are still relevant
-                in contemporary conversations about ethical living. The novel
-                has had a lasting impact on Japanese literature and has inspired
-                filmmakers like Hayao Miyazaki, who used it as a primary
-                inspiration for his 2023 animated film "The Boy and the Heron".
-                The enduring appeal of "How Do You Live?" lies in its universal
-                exploration of the human experience, making it a classic read
-                for generations. 4o mini
-              </p>
-            </Link>
+              <p className="px-3 text-[#087E8B]">|</p>
+              <div>
+                <p className="font-semibold text-[#087E8B]">
+                  {detail.payload.published_year}
+                </p>
+              </div>
+            </div>
+            <p className="font-normal leading-7 mt-2">
+              {detail.payload.ct_description}
+            </p>
           </div>
         </div>
       </div>

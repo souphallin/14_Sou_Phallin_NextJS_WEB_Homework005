@@ -4,14 +4,17 @@ import Link from "next/link";
 export default function CardOldSchoolComponent(items) {
   return (
     <>
-        <Link href="#" className="cursor-pointer">
+        <Link href="/old-school-cartoons" className="cursor-pointer">
           <Card className="">
-            <Image
-              removewrapper=""
-              alt="Card background"
-              className="z-0 w-full h-[460px] object-cover"
-              src={items.image}
-            />
+            <Link href={`/old-school-cartoons/${items.id}`}>
+              <Image
+                removewrapper=""
+                alt="Card background"
+                className="z-0 w-full h-[460px] object-cover"
+                src={items.image}
+              />
+            </Link>
+            
             <div>
               <h3 className="font-bold pt-3 pb-1 text-[#0B3954]">
                 {items.ct_title}
