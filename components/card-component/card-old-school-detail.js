@@ -1,6 +1,6 @@
-import Link from "next/link";
+import { Link } from "iconsax-react";
 
-export default async function CardBookCategoryDetailComponent(detail) {
+export default function CardOldSchoolDetailComponent(detail) {
   return (
     <>
       <div className="bg-gray-300">
@@ -82,9 +82,9 @@ export default async function CardBookCategoryDetailComponent(detail) {
                     stroke-linejoin="round"
                   />
                 </svg>
-                <Link href="/book-categories">
+                <Link href="/old-school-cartoons">
                   <h4 className="text-[#0B3954] font-semibold text-base">
-                    Book Categories
+                    Old School Cartoon Icon
                   </h4>
                 </Link>
               </div>
@@ -141,13 +141,13 @@ export default async function CardBookCategoryDetailComponent(detail) {
                 </svg>
 
                 <h4 className="text-[#C81D25] font-semibold text-base">
-                  {detail.payload.book_title}
+                  Book Name
                 </h4>
               </div>
             </div>
             <div className="absolute -top-24 right-32">
               <img
-                src={detail.payload.image}
+                src="https://s3-alpha-sig.figma.com/img/66fc/adb4/1314aae54a3309a1c3f5d325e7d9a354?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Aip9Gt-QIMcjP~MnudlZfZ6Xc0VYWMDdnBPBH468QgsZ-whpOUKSmoEMlHOu6N2vLlqT5G6g7RDLBGkmYMHRLX4YeuRh55FWDxuU0p1jpl0JKIYqHIE0SevctYq3iEmB-snE~mxBA7d1Npt5ADFzjhheXlOn1gcebEg-MYqpv9qSpqRSffLxcnkZJkA8IcnXC0zmE6erNZ2L7y25RxSO9UrbMErjRkzc0voOgJ7bJYebQeFEXElVaqSe7eh3YXiIFIg7PRkKdOCbRBM3KpLeaNQZ3Me0O49bWP13Be8aQ2F9mIm8AsMJqF1uGI~fmGV3gBpoXoCWgdL4lgJCZ0uPbw__"
                 width={250}
                 alt="Picture of the Book Category"
                 className="rounded-xl drop-shadow-lg"
@@ -156,97 +156,64 @@ export default async function CardBookCategoryDetailComponent(detail) {
           </div>
 
           <div className="pt-60 px-32 pb-20">
-            {/* <Link href={`/book-categories/${id}`}> */}
-            <Link href={`/book-categories`}>
-              <h2 className="text-[#0B3954] font-semibold text-2xl">
-                {detail.payload.book_title}
-              </h2>
+            <Link href={`/old-school-cartoons`}>
+              <h2 className="text-[#0B3954] font-semibold text-2xl">Tom and Jerry</h2>
               <div className="flex gap-2 text-lg py-2">
                 <p>by</p>
                 <h4 className="text-[#087E8B] font-semibold">Black Monster</h4>
               </div>
               <p className="font-normal leading-7">
-                {detail.payload.description}
+                "How Do You Live?" (君たちはどう生きるか, Kimitachi wa Dō Ikiru
+                ka) by Genzaburō Yoshino is a philosophical coming-of-age novel
+                set in pre-war Japan. It revolves around Junichi "Copper" Honda,
+                a thoughtful 15-year-old boy, who is facing the complexities of
+                adolescence, his family life, and the social realities around
+                him. Copper's life changes after his father’s death, which
+                forces him to grapple with the idea of responsibility, morality,
+                and the value of individual actions. The novel takes a unique
+                approach by blending a narrative with deep philosophical
+                lessons. Copper’s Uncle, a major influence on him, writes long
+                letters to him that contain valuable wisdom about how one should
+                live life, focusing on themes like social justice, personal
+                responsibility, and compassion. These letters are the central
+                guide for Copper, offering him tools to navigate the world and
+                think critically about what it means to be a good person.
+                Throughout the story, Copper experiences several incidents that
+                challenge his understanding of society. He confronts issues like
+                bullying, classism, and how to deal with personal suffering. One
+                important aspect of the novel is Copper's relationship with his
+                peers and the way he learns to handle the complexities of
+                friendships and social interactions. He also learns about the
+                differences between the ideal self and the real self,
+                discovering how to cope with imperfections and imperfections in
+                others. Copper’s growth throughout the novel isn't just
+                emotional but deeply intellectual. His uncle’s lessons on the
+                interconnectedness of people, the importance of self-awareness,
+                and contributing to the greater good shape Copper into a
+                reflective and compassionate young man. By the end of the novel,
+                Copper begins to develop a clearer understanding of how he
+                should live his life, striving to be a person who lives not only
+                for himself but also for others. The book isn’t just about a boy
+                growing up; it’s a call to the readers to reflect on their own
+                lives and the way they live in the world. It challenges its
+                audience to think critically about their values and actions,
+                making it timeless in its appeal. The story is particularly
+                impactful for younger readers, as it offers them both a
+                fictional narrative and practical lessons for life. In addition
+                to its philosophical depth, "How Do You Live?" has influenced
+                Japanese culture profoundly. The book has been celebrated for
+                its positive moral teachings, and its themes are still relevant
+                in contemporary conversations about ethical living. The novel
+                has had a lasting impact on Japanese literature and has inspired
+                filmmakers like Hayao Miyazaki, who used it as a primary
+                inspiration for his 2023 animated film "The Boy and the Heron".
+                The enduring appeal of "How Do You Live?" lies in its universal
+                exploration of the human experience, making it a classic read
+                for generations. 4o mini
               </p>
             </Link>
           </div>
         </div>
-
-        {/* <div className="relative h-[1200px]">
-        <div className="">
-          
-
-
-          <div className="absolute right-20 top-0">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/a58b/a7b5/56c0b55beb6f5293b7ad9065c7eca3d1?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KXwSItOG7pJjKYJJKJhbX0x9hWF0C6gIs7I-Yzvx5EpO0AHCgV3De1~oEeXKjaDNdugNCV2RBZ3Cpqi-xiELt5Frs4OQkbtTW8Tnzz1cMzNxAbAkS8zD9VYdXvp~Af5E5xO0olGQO0q0SIgJ-xmRz~rAks46AF-Sf3WS4qE8c9AIuIIdMt6PKCDQPo3axkJX1NzlXiatohYouaihN44SbmQrBg7hLDbCAC5SY0uabn-nZ2TnIEH7vk5yElVrPKoBk~8yswuk2Wx83KUprUhII2fnfBjqUFzpooTJzVPEI1M070HYHectMYg8PtpXSS~HSAiChOy~nGYVD9MqAcQe-A__"
-              width={200}
-              alt="Picture of the Book Category"
-              className="rounded-md drop-shadow-lg"
-            />
-          </div>
-          
-        </div>
-        <div className="pt-72 px-20">
-          <Link href={`/book-categories/${id}`}>
-            <h2 className="text-[#0B3954] font-semibold text-2xl">
-              How Do You Live?
-            </h2>
-            <div className="flex gap-2 text-lg py-2">
-              <p>by</p>
-              <h4 className="text-[#087E8B] font-semibold">Black Monster</h4>
-            </div>
-            <p className="font-normal leading-7">
-              "How Do You Live?" (君たちはどう生きるか, Kimitachi wa Dō Ikiru ka)
-              by Genzaburō Yoshino is a philosophical coming-of-age novel set in
-              pre-war Japan. It revolves around Junichi "Copper" Honda, a
-              thoughtful 15-year-old boy, who is facing the complexities of
-              adolescence, his family life, and the social realities around him.
-              Copper's life changes after his father’s death, which forces him to
-              grapple with the idea of responsibility, morality, and the value of
-              individual actions. The novel takes a unique approach by blending a
-              narrative with deep philosophical lessons. Copper’s Uncle, a major
-              influence on him, writes long letters to him that contain valuable
-              wisdom about how one should live life, focusing on themes like
-              social justice, personal responsibility, and compassion. These
-              letters are the central guide for Copper, offering him tools to
-              navigate the world and think critically about what it means to be a
-              good person. Throughout the story, Copper experiences several
-              incidents that challenge his understanding of society. He confronts
-              issues like bullying, classism, and how to deal with personal
-              suffering. One important aspect of the novel is Copper's
-              relationship with his peers and the way he learns to handle the
-              complexities of friendships and social interactions. He also learns
-              about the differences between the ideal self and the real self,
-              discovering how to cope with imperfections and imperfections in
-              others. Copper’s growth throughout the novel isn't just emotional
-              but deeply intellectual. His uncle’s lessons on the
-              interconnectedness of people, the importance of self-awareness, and
-              contributing to the greater good shape Copper into a reflective and
-              compassionate young man. By the end of the novel, Copper begins to
-              develop a clearer understanding of how he should live his life,
-              striving to be a person who lives not only for himself but also for
-              others. The book isn’t just about a boy growing up; it’s a call to
-              the readers to reflect on their own lives and the way they live in
-              the world. It challenges its audience to think critically about
-              their values and actions, making it timeless in its appeal. The
-              story is particularly impactful for younger readers, as it offers
-              them both a fictional narrative and practical lessons for life. In
-              addition to its philosophical depth, "How Do You Live?" has
-              influenced Japanese culture profoundly. The book has been celebrated
-              for its positive moral teachings, and its themes are still relevant
-              in contemporary conversations about ethical living. The novel has
-              had a lasting impact on Japanese literature and has inspired
-              filmmakers like Hayao Miyazaki, who used it as a primary inspiration
-              for his 2023 animated film "The Boy and the Heron". The enduring
-              appeal of "How Do You Live?" lies in its universal exploration of
-              the human experience, making it a classic read for generations. 4o
-              mini
-            </p>
-          </Link>
-          
-        </div>
-      </div> */}
       </div>
     </>
   );

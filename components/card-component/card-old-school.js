@@ -17,7 +17,7 @@ export default function CardOldSchoolComponent(items) {
                 {items.ct_title}
               </h3>
               <div className="flex">
-                <div className="flex">
+                <div className="flex gap-2">
                   <svg
                     width="24"
                     height="24"

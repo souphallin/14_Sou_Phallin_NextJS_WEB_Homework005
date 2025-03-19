@@ -1,7 +1,14 @@
+
+"use client";
+import Form from 'next/form'
+import { usePathname } from 'next/navigation'
+
+
 export default function SearchBar(){
+    const pathName = usePathname();
     return(
         <div className="flex justify-center items-center">
-            <form action="/search" className="max-w-full w-full px-4">
+            <Form action={pathName} className="max-w-full w-full px-4">
                 <div className="relative">
                     <button type="submit">
                         <svg
@@ -20,12 +27,12 @@ export default function SearchBar(){
                     </button>
                     <input
                         type="text"
-                        name="q"
+                        name="search"
                         className="w-full border h-12 shadow p-4 rounded-xl dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200"
                         placeholder="search"
                     />
                 </div>
-            </form>
+            </Form>
         </div>
     )
 }
