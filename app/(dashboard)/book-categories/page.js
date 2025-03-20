@@ -3,23 +3,30 @@ import PageTitleWithSelectBook from "@/components/page-title-route/page-title-wi
 import SearchBar from "@/components/search-bar/search-bar";
 import Link from "next/link";
 
-export default async function BookCategoryDetailPage({searchParams}) {
+export default async function BookCategoryDetailPage({ searchParams }) {
+  const searchResult = (await searchParams).search;
+  // console.log("search : ", searchResult);
 
-  const searchResult = (await searchParams).search
-  console.log("search : ", searchResult)
+  const dropdownResult = (await searchParams).query
 
-  const res = await fetch(`https://nextjs-homework005.vercel.app/api/book${!searchResult ? "" : `?search=${searchResult}` }`) ;
+  // const res = await fetch(
+  //   `https://nextjs-homework005.vercel.app/api/book${!dropdownResult ?" ":`?query=${dropdownResult}` }`)
+
+  const res = await fetch(
+      `https://nextjs-homework005.vercel.app/api/book${!dropdownResult && !searchResult ? "" : dropdownResult ? `?query=${dropdownResult}` : `?search=${searchResult}` }`)
+
   const categories = await res.json();
 
   // console.log("Category : " , categories)
+
   return (
     <>
       <section className="col-span-5 bg-gray-300 p-5 ">
-        {/* Search Bar */}
-        <div className="mb-4"><SearchBar /></div>
+        <div className="mb-4">
+          <SearchBar />
+        </div>
 
         <div className="bg-white p-10 rounded-xl">
-          {/* Children Content */}
           <div className="flex-1 ">
             <PageTitleWithSelectBook title="Book Category" />
 

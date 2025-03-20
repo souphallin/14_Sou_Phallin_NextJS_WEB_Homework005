@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation'
 
 export default function SearchBar(){
     const pathName = usePathname();
+
+    console.log("Pathname : ", pathName)
     return(
         <div className="flex justify-center items-center">
             <Form action={pathName} className="max-w-full w-full px-4">
@@ -28,7 +30,7 @@ export default function SearchBar(){
                     <input
                         type="text"
                         name="search"
-                        className="w-full border h-12 shadow p-4 rounded-xl ring-0 focus:ring-1 focus:ring-blue-500 dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200"
+                        className="w-full border h-12 shadow p-4 rounded-xl ring-0 focus:ring-2 focus:ring-blue-500 dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200"
                         placeholder="search"
                     />
                 </div>
