@@ -13,13 +13,13 @@ export default function NavbarLink(item){
         <>
 
             <Link
-                className={`flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300 ${
-                    pathName === item.href ? "bg-gray-300" : "bg-none"
+                className={`flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 ${
+                    pathName === item.href ? "bg-[#F5F7F8]" : "bg-none"
                 }`}
                 href={item.href}
                 >
                 {item.icon}
-                <span className="ml-2 text-sm font-medium">{item.label}</span>
+                <span className="ml-2 text-sm font-medium pl-3">{item.label}</span>
             </Link>
 
         </>

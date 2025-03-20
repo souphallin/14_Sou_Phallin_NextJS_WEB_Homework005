@@ -17,7 +17,7 @@ export default function DashboardSidebar(){
                         className="rounded-full object-cover w-[160px] h-[160px]"
                         />
                     </div>
-                    <p className="text-lg font-normal text-[#0B3954] mt-2">Black Monster</p>
+                    <p className="text-xl font-semibold text-[#0B3954] mt-2">Black Monster</p>
                     <h2 className="text-lg font-normal mt-1 text-[#087E8B]">blackmonster@gmail.com</h2>
                 </div>
                 <div className="w-full px-2">

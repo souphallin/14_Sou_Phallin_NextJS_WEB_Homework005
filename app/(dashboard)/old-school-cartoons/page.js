@@ -4,16 +4,24 @@ import SearchBar from "@/components/search-bar/search-bar";
 
 export default async function OldSchoolCategoryPage({ searchParams }) {
   const searchResult = (await searchParams).search;
-  console.log("Old School Search : " , await searchParams)
+  // console.log("Old School Search : " , await searchParams)
+  const dropdownResult = (await searchParams).genre;
 
-  const res = await fetch(`https://nextjs-homework005.vercel.app/api/cartoon${!searchResult ? "" : `?search=${searchResult}`}`);
+  const res = await fetch(
+    `https://nextjs-homework005.vercel.app/api/cartoon${
+      !dropdownResult && !searchResult
+        ? ""
+        : dropdownResult
+        ? `?query=${dropdownResult}`
+        : `?search=${searchResult}`
+    }`
+  );
   const oldschools = await res.json();
   // console.log("OldSchool : ", oldschools)
 
   return (
     <>
-      <section className="col-span-5 bg-gray-300 p-5 ">
-        {/* Search Bar */}
+      <section className="col-span-5 p-5 ">
         <div className="mb-4">
           <SearchBar />
         </div>

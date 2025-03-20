@@ -4,7 +4,7 @@ import SearchBar from "@/components/search-bar/search-bar";
 export default function SportAndFitness() {
   return (
     <>
-      <section className="col-span-5 bg-gray-300 p-5 ">
+      <section className="col-span-5 p-5 ">
         <div className="mb-4">
           <SearchBar />
         </div>

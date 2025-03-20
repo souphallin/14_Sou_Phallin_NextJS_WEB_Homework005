@@ -7,7 +7,7 @@ export default function CardComponent(items) {
     <>
         <Link href="#" className="cursor-pointer">
           <section className="flex items-center justify-center bg-opacity-25 mt-32">
-            <div className=" bg-white rounded-xl border border-[#e6e6e6] font-['Poppins'] p-3 flex gap-10">
+            <div className=" bg-[#F5F7F8] rounded-xl border border-[#e6e6e6] font-['Poppins'] p-3 flex gap-10">
               <div className=" grid grid-cols-7 gap-4">
                 <div className="relative col-span-3 flex flex-col justify-between h-[140px]">
                   <div className="">

@@ -6,7 +6,6 @@ import Link from "next/link";
 export default async function BookCategoryDetailPage({ searchParams }) {
   const searchResult = (await searchParams).search;
   // console.log("search : ", searchResult);
-
   const dropdownResult = (await searchParams).query
 
   // const res = await fetch(
@@ -14,14 +13,12 @@ export default async function BookCategoryDetailPage({ searchParams }) {
 
   const res = await fetch(
       `https://nextjs-homework005.vercel.app/api/book${!dropdownResult && !searchResult ? "" : dropdownResult ? `?query=${dropdownResult}` : `?search=${searchResult}` }`)
-
   const categories = await res.json();
-
   // console.log("Category : " , categories)
 
   return (
     <>
-      <section className="col-span-5 bg-gray-300 p-5 ">
+      <section className="col-span-5 p-5 ">
         <div className="mb-4">
           <SearchBar />
         </div>

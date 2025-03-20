@@ -12,7 +12,7 @@ export default function HomePage() {
                       <DashboardSidebar />
                     </aside>
           
-                    <section className="col-span-5 bg-gray-300 p-5 ">
+                    <section className="col-span-5 bg-[#F5F7F8] p-5 ">
                       {/* Search Bar */}
                       <div className="mb-4">
                         <SearchBar />

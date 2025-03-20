@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CardOldSchoolDetailComponent(detail) {
   return (
     <>
-      <div className="bg-gray-300">
+      <div className="bg-[#F5F7F8]">
         <div className="relative bg-white h-fit mx-32 rounded-t-3xl top-40 shadow-xl">
           <div className="flex pl-0">
             <div className="absolute -top-24 flex gap-3 items-center">

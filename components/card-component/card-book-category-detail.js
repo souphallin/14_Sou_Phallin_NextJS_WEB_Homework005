@@ -3,7 +3,7 @@ import Link from "next/link";
 export default async function CardBookCategoryDetailComponent(detail) {
   return (
     <>
-      <div className="bg-gray-300">
+      <div className="bg-[#F5F7F8]">
         <div className="relative bg-white h-fit mx-32 rounded-t-3xl top-40 shadow-xl">
           <div className="flex pl-0">
             {/* <NavBarLink/> */}
@@ -163,7 +163,7 @@ export default async function CardBookCategoryDetailComponent(detail) {
               </h2>
               <div className="flex gap-2 text-lg py-2">
                 <p>by</p>
-                <h4 className="text-[#087E8B] font-semibold">Black Monster</h4>
+                <h4 className="text-[#087E8B] font-semibold">{detail.payload.book_author}</h4>
               </div>
               <p className="font-normal leading-7">
                 {detail.payload.description}
